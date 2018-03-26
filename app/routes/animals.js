@@ -9,18 +9,22 @@ const utils = require('./utils');
 
 router.use((req,res,next) => {
 
+  // Get the access token from request header 'access-token'
   const accessToken = req.header('access-token');
-  console.log(accessToken);  
+  console.log('accessToken: '+accessToken);  
   
+  // validate the access token
   const validationResult = validation.validateAccessToken(accessToken);
   console.log('validation result: '+ JSON.stringify(validationResult));
 
+  // if validation returns invalid then return error code and error msg to user
   if(!validationResult.errorCode==0){
     //return next(createError(validationResult.errorCode, validationResult.errorMsg));
     res.status(validationResult.errorCode).json({'errorMsg':validationResult.errorMsg});
     return false;
   }
 
+  // set the access token in request
   req.accessToken = accessToken;
   next();
 

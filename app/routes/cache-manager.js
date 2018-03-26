@@ -4,12 +4,11 @@ const NodeCache = require( "node-cache" );
 
 const tokenCache = new NodeCache();
 
+// Set ttl as 60 seconds or 1 min
 const ttl = 60;
 
 function setToken(key,value){
-
-    return tokenCache.set(key,value,60);
-
+    return tokenCache.set(key,value,ttl);
 }
 
 function getToken(key){
