@@ -1,5 +1,9 @@
 const assert = require('chai').assert;
 const utils = require('../app/routes/utils');
+/**
+ * @author Priyadarshan
+ * @description test class for utils
+ */
 
 describe('utils.js unit test class',() => {
 

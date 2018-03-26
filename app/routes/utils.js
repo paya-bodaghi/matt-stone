@@ -1,5 +1,10 @@
 'use strict';
 
+/**
+ * @author Priyadarshan
+ * @description utils helper class
+ */
+
 const cryptoRandomString = require('crypto-random-string');
 const apiUsers = require('../resources/apiUsers.json');
 const animalsJson = require('../resources/animals.json');

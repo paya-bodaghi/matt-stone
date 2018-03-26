@@ -1,5 +1,10 @@
 'use strict';
 
+/**
+ * @author Priyadarshan
+ * @description validation helper class
+ */
+
 const validator = require('validator');
 const cache = require('./cache-manager');
 const utils = require('./utils');

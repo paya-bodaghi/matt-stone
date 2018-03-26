@@ -1,4 +1,10 @@
 'use strict';
+
+/**
+ * @author Priyadarshan
+ * @description API to authenticate a user
+ */
+
 const express = require('express');
 const router = express.Router();
 const createError = require('http-errors');
@@ -34,7 +40,6 @@ router.use((req, res, next) => {
 
 /* Authenticate user */
 router.post('/', (req, res, next) => {
-
 
   const clientId = req.clientId;
   const secretKey = req.secretKey;

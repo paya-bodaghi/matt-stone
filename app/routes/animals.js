@@ -1,5 +1,10 @@
 'use strict';
 
+/**
+ * @author Priyadarshan
+ * @description API to get group of animals for authenticated user
+ */
+
 const express = require('express');
 const router = express.Router();
 const createError = require('http-errors');
@@ -37,7 +42,7 @@ router.use((req,res,next) => {
   next();
 });
 
-
+/* Get group of animals */
 router.get('/', (req,res,next) => {
  
   const apiUserId = req.apiUserId;
