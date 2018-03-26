@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const cryptoRandomString = require('crypto-random-string');
 const apiUsers = require('../resources/apiUsers.json');
