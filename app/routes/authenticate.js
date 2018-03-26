@@ -11,7 +11,6 @@ const createError = require('http-errors');
 const app = express();
 
 const validation = require('./validation');
-const cryptoRandomString = require('crypto-random-string');
 const cache = require('./cache-manager');
 const utils = require('./utils');
 
